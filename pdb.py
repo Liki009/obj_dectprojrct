@@ -22,13 +22,13 @@ def sip(i=""):#put value to xls element
 def update():#merge xls to main database
     ipdf=pd.read_excel("data.xlsx")
     spdf=pd.read_excel("new.xlsx")
-    print(spdf)
-    print()
-    print(ipdf)
+
+
+
     ipdf.append(spdf, ignore_index=True)
     ipdf.to_excel("data.xlsx", index=False)
-    print(ipdf)
-    print("done")
+
+
 def grip():#get value of xls as string
     wb=openpyxl.load_workbook(xlname,data_only=True)
     sh=wb.active
